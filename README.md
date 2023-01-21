@@ -47,7 +47,7 @@ There should be one project repository per group. The other members do not fork 
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 ```
 * As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions)
-* Our main files will include your main header file [main.h](./main.h): ***#include main.h***
+* Our main files will include your main header file [main.h](./main.h): #include main.h
 * You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use: [main.c](./main.c)
 * We strongly encourage you to work all together on a set of tests
 * If the task does not specify what to do with an edge case, do the same as printf
@@ -68,9 +68,9 @@ Write a function that produces output according to a format.
 * Returns: the number of characters printed (excluding the null byte used to end output to strings)
 * write output to stdout, the standard output stream
 * format is a character string. The format string is composed of zero or more directives. See man 3 printf for more detail. You need to handle the following conversion specifiers:
-	* c
-	* s
-	* %
+	* [c](./prep_string.c)
+	* [s](./prep_string.c)
+	* [%](./printf.c)
 * You don’t have to reproduce the buffer handling of the C library printf function
 * You don’t have to handle the flag characters
 * You don’t have to handle field width
@@ -81,8 +81,8 @@ Write a function that produces output according to a format.
 ```
 Handle the following conversion specifiers:
 ```
-* d
-* i
+* [d](./prep_numeric.c)
+* [i](./prep_numeric.c)
 * You don’t have to handle the flag characters
 * You don’t have to handle field width
 * You don’t have to handle precision
@@ -93,9 +93,90 @@ Handle the following conversion specifiers:
 Handle the following custom conversion specifiers:
 ```
 * b: the unsigned int argument is converted to binary
+	* [unsigned_int_to_binary](./uitob.c) 
+	* [long_unsigned_int_to_binary](./luitob.c) 
+	* [short_unsigned_int_to_binary](./huitob.c)
+	* [short-short_unsigned_int_to_binary](./hhuitob.c)
 
+[task3](./printf.c)
+```
+Handle the following conversion specifiers:
+```
+* u:
+	* [unsigned_to_string](./utos.c)
+	* [unsigned_to_binary](./uitob.c)
+	* [long_unsigned_to_string](./lutos.c)
+	* [long_unsigned_to_binary](./luitob.c)
+	* [short_unsigned_to_string](./hutos.c)
+	* [short_unsigned_to_binary](./huitob.c)
+	* [short-short_unsigned_to_string](./hhutos.c)
+	* [short-short_unsigned_to_binary](./hhuitob.c)
+* o:
+	* [integer_to_octal](./itoo.c)
+	* [long_integer_to_octal](./litoo.c)
+	* [short_integer_to_octal](./hitoo.c)
+	* [short-short_integer_to_octal](./hhitoo.c)
+* x:
+	* [integer_to_hex](./itox.c)
+	* [long_integer_to_hex](./litox.c)
+	* [short_integer_to_hex](./hitox.c)
+	* [short-short_integer_to_hex](./hhitox.c)
+* X:
+	* [integer_to_hex](./itoX.c)
+	* [long_integer_to_hex](./litoX.c)
+	* [short_integer_to_hex](./hitoX.c)
+	* [short-short_integer_to_hex](./hhitoX.c)
+
+* You don’t have to handle the flag characters
+* You don’t have to handle field width
+* You don’t have to handle precision
+* You don’t have to handle the length modifiers
+
+[task4](./printf.c)
+```
+Use a local buffer of 1024 chars in order to call write as little as possible.
+```
+* [buffer](./buffer_const_char.c)
+
+[task5](./printf.c)
+```
+Handle the following custom conversion specifier:
+```
+* S : prints the string.
+* Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
+	* [print_non-printable_characters](./print_hidden.c)
+
+
+[task6](./printf.c)
+```
+Handle the following conversion specifier: p.
+```
+* You don’t have to handle the flag characters
+* You don’t have to handle field width
+* You don’t have to handle precision
+* You don’t have to handle the length modifiers
+	* [pointer_specifier](./get_specifier.c)
+
+[task7](./printf.c)
+```
+Handle the following flag characters for non-custom conversion specifiers:
+```
+* [+](./get_specifier.c)
+* [space](./get_specifier.c)
+* [#](./get_specifier.c)
+
+
+[task8](./printf.c)
+```
+Handle the following length modifiers for non-custom conversion specifiers:
+```
+l
+
+h
+
+Conversion specifiers to handle: d, i, u, o, x, X
 
 
 ## Collaborators
-Yasmine Ben Ali
-Samuel Selasi Kporvie
+***Yasmine Ben Ali***
+***Samuel Selasi***
