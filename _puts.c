@@ -3,7 +3,7 @@
 /**
  * _puts - print a string followed by a newline
  * @s: the string
- * Return: string
+ * Return: len
  */
 
 int _puts(char *s)
