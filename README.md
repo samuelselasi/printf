@@ -48,7 +48,7 @@ There should be one project repository per group. The other members do not fork 
 ```
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 ```
-* As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions)
+* As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a [test](./test) folder containing all your tests files including main functions)
 * Our main files will include your main header file [main.h](./main.h): #include main.h
 * You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use: [main.c](./main.c)
 * We strongly encourage you to work all together on a set of tests
@@ -61,7 +61,6 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 * Any form of plagiarism is strictly forbidden and will result in removal from the program.
 
 ## Tasks
-
 [task0](./printf.c)
 ```
 Write a function that produces output according to a format.
@@ -172,13 +171,80 @@ Handle the following flag characters for non-custom conversion specifiers:
 ```
 Handle the following length modifiers for non-custom conversion specifiers:
 ```
-l
+* [l](./get_specifier.c)
+	* [ld](./litos.c)
+	* [li](./litos.c)
+	* [lu](./lutos.c)
+	* [lo](./litoo.c)
+	* [lx](.litox.c/)
+	* [lX](./litoX.c)
 
-h
+* [h](./get_specifier.c)
+	* [hd](./hitos.c)
+	* [hi](./hitos.c)
+	* [hu](./hutos.c)
+	* [ho](./hitoo.c)
+	* [hx](./hitox.c)
+	* [hX](./hitoX.c)
 
-Conversion specifiers to handle: d, i, u, o, x, X
+* Conversion specifiers to handle: d, i, u, o, x, X
 
+
+[task9](./printf.c)
+```
+Handle the field width for non-custom conversion specifiers.
+```
+* [field-width_specifiers](./get_specifier.c)
+
+
+[task10](./printf.c)
+```
+Handle the precision for non-custom conversion specifiers.
+```
+* [precision_specifiers](./get_specifier.c)
+
+
+[task11](./printf.c)
+```
+Handle the 0 flag character for non-custom conversion specifiers.
+```
+* [null_flag](./null.c)
+
+
+[task12](./printf.c)
+```
+Handle the - flag character for non-custom conversion specifiers.
+```
+* [-flag_specifier](./get_specifier.c)
+
+
+[task13](./printf.c)
+```
+Handle the following custom conversion specifier:
+```
+* r : prints the reversed string
+	* [reverse_string](./rev_str.c)
+
+
+[task14](./printf.c)
+```
+Handle the following custom conversion specifier:
+```
+* R: prints the rot13'ed string
+	* [rot13_encryption](./rot13.c)
+
+
+[task15](./printf.c)
+```
+All the above options work well together.
+```
+* [header_file](./main.h)
+* Helper functions:
+	* [specifiers](./get_specifier.c)
+	* [stringize_arguments](./stringize_arg.c)
+	* [check_if_puts](./ifputs.c)
+	* [hancle_empty_chars](./nil.c)
 
 ## Collaborators
-***Yasmine Ben Ali***
-***Samuel Selasi***
+* ***Yasmine Ben Ali***
+* ***Samuel Selasi***
