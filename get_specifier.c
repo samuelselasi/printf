@@ -31,7 +31,8 @@ specifier get_specifier(char **format, va_list list)
 			spec.zero = 1;
 		(*format)++;
 	}
-	spec.width = 0;	spec.widthflag = 0;
+	spec.width = 0;
+	spec.widthflag = 0;
 	if (**format == '*')
 	{
 		spec.widthflag = 1;
@@ -48,7 +49,8 @@ specifier get_specifier(char **format, va_list list)
 			(*format)++;
 		}
 	}
-	spec.precision = 1; spec.precisionflag = 0;
+	spec.precision = 1;
+	spec.precisionflag = 0;
 	if (**format == '.')
 	{
 		spec.precisionflag = 1;
