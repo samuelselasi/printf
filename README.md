@@ -4,6 +4,8 @@
 ```
 Write your own printf function.
 ```
+![printf](https://user-images.githubusercontent.com/85158665/213859591-8d8dbbb1-2be7-4f75-ae00-cc1b66dda46c.png)
+
 ## Resources
 Read or watch:
 
