@@ -2,7 +2,6 @@
 #define MAIN_H
 
 #include <stdarg.h>
-#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -48,6 +47,7 @@ char *prep_string(char *str, specifier spec);
 char *prep_numeric(char *str, specifier spec);
 
 int _strlen(char *str);
+int _puts(char *s);
 int ifputs(char *s);
 
 char *itos(va_list list);

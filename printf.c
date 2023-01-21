@@ -21,7 +21,7 @@ int _printf(char *format, ...)
 	va_start(list, format);
 	if (ifputs(format))
 	{
-		printtotal = puts(va_arg(list, char *));
+		printtotal = _puts(va_arg(list, char *));
 		va_end(list);
 		return (printtotal);
 	}
