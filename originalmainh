@@ -39,7 +39,6 @@ typedef struct specifier
 } specifier;
 
 int _printf(char *format, ...);
-int handle_format_string(char *format, char *buffer, unsigned int *len, va_list list);
 int buffer_const_char(char **format, char *buffer, unsigned int *len);
 char *stringize_arg(va_list list, specifier spec, unsigned int *freeflag);
 specifier get_specifier(char **format, va_list list);
