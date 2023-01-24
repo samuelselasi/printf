@@ -213,11 +213,33 @@ All the above options work well together.
 * [header_file](./main.h)
 
 ## Pseudocode
+[Pseudocode_For_Printf](./https://docs.google.com/document/d/1BOKUnRWP_8GRWBPqD_BZW-OB2V7Nh4YgCH765JsM1gg/edit?usp=sharing)
 
 ## Flow-Chart Diagram
 
 ## Implementation
+1. The function takes a format string and a variable number of arguments.
+
+2. It initialises variables including an integer i, printed, printed_chars, flags, width, precision, size, buff_ind, a char buffer with a size of BUFF_SIZE and a va_list named list
+
+3. The function checks if the format string is NULL and returns -1 if it is.
+
+4. It initialises the variable argument list and sets the buffer index to 0 and the printed characters to 0.
+
+5. The function iterates through the format string, for each iteration it checks if the current character is not '%'
+
+6. If the current character is not '%', it adds the character to the buffer and increments the buffer index by 1.
+
+7. If the buffer index reaches the size of the buffer, it calls the print_buffer function to print the buffer.
+
+8. If the current character is '%', it calls the helper functions get_flags, get_width, get_precision, get_size and handle_print to process the formatting
+9. It prints the output to the buffer and increments the printed_chars by the number of characters printed.
+
+10. At the end of the iteration, it calls the print_buffer function to print whatever is left in the buffer.
+
+11. The function ends the variable argument list and returns the total number of characters printed.
+
 
 # Collaborators
-* **Yasmine Ben Ali**
-* **Samuel Selasi**
+- **Yasmine Ben Ali**
+- **Samuel Selasi**
