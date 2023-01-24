@@ -216,7 +216,7 @@ All the above options work well together.
 [Pseudocode_For_Printf](./https://docs.google.com/document/d/1BOKUnRWP_8GRWBPqD_BZW-OB2V7Nh4YgCH765JsM1gg/edit?usp=sharing)
 
 ## Flow-Chart Diagram
-
+![_PRINTF](https://user-images.githubusercontent.com/117751396/214351434-afbca8cb-b6d0-4494-91c8-08236143bcb8.png)
 ## Implementation
 1. The function takes a format string and a variable number of arguments.
 
