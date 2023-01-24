@@ -233,7 +233,7 @@ All the above options work well together.
 
 7. If the buffer index reaches the size of the buffer, it calls the print_buffer function to print the buffer.
 
-8. If the current character is '%', it calls the helper functions get_flags, get_width, get_precision, get_size and handle_print to process the formatting
+8. If the current character is "%", it calls the helper functions get_flags, get_width, get_precision, get_size and handle_print to process the formatting
 9. It prints the output to the buffer and increments the printed_chars by the number of characters printed.
 
 10. At the end of the iteration, it calls the print_buffer function to print whatever is left in the buffer.
