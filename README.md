@@ -69,86 +69,70 @@ Write a function that produces output according to a format.
 * Returns: the number of characters printed (excluding the null byte used to end output to strings)
 * write output to stdout, the standard output stream
 * format is a character string. The format string is composed of zero or more directives. See man 3 printf for more detail. You need to handle the following conversion specifiers:
-	* [c](./prep_string.c)
-	* [s](./prep_string.c)
-	* [%](./printf.c)
+	* [c](./print_char.c)
+	* [s](./print_string.c)
+	* [%](./_printf.c)
 * You don’t have to reproduce the buffer handling of the C library printf function
 * You don’t have to handle the flag characters
 * You don’t have to handle field width
 * You don’t have to handle precision
 * You don’t have to handle the length modifiers
 
-[task1](./printf.c)
+[task1](./_printf.c)
 ```
 Handle the following conversion specifiers:
 ```
-* [d](./prep_numeric.c)
-* [i](./prep_numeric.c)
+* [d](./print_int.c)
+* [i](./print_int.c)
+
 * You don’t have to handle the flag characters
 * You don’t have to handle field width
 * You don’t have to handle precision
 * You don’t have to handle the length modifiers
 
-[task2](./printf.c)
+[task2](./_printf.c)
 ```
 Handle the following custom conversion specifiers:
 ```
 * b: the unsigned int argument is converted to binary
-	* [unsigned_int_to_binary](./uitob.c) 
-	* [long_unsigned_int_to_binary](./luitob.c) 
-	* [short_unsigned_int_to_binary](./huitob.c)
-	* [short-short_unsigned_int_to_binary](./hhuitob.c)
+	* [Print_Binary](./print_binary.c) 
 
 [task3](./printf.c)
 ```
 Handle the following conversion specifiers:
 ```
 * u:
-	* [unsigned_to_string](./utos.c)
-	* [unsigned_to_binary](./uitob.c)
-	* [long_unsigned_to_string](./lutos.c)
-	* [long_unsigned_to_binary](./luitob.c)
-	* [short_unsigned_to_string](./hutos.c)
-	* [short_unsigned_to_binary](./huitob.c)
-	* [short-short_unsigned_to_string](./hhutos.c)
-	* [short-short_unsigned_to_binary](./hhuitob.c)
+	* [Print_Unsigned](./print_unsigned.c)
 * o:
-	* [integer_to_octal](./itoo.c)
-	* [long_integer_to_octal](./litoo.c)
-	* [short_integer_to_octal](./hitoo.c)
-	* [short-short_integer_to_octal](./hhitoo.c)
+	* [Print_Octal](./print_octal.c)
 * x:
-	* [integer_to_hex](./itox.c)
-	* [long_integer_to_hex](./litox.c)
-	* [short_integer_to_hex](./hitox.c)
-	* [short-short_integer_to_hex](./hhitox.c)
+	* [Print_Hexadecimal](./print_hexadecimal.c)
+	* [Print_Lower_Hex_Chars](./print_hex_lower.c)
 * X:
-	* [integer_to_hex](./itoX.c)
-	* [long_integer_to_hex](./litoX.c)
-	* [short_integer_to_hex](./hitoX.c)
-	* [short-short_integer_to_hex](./hhitoX.c)
+	* [Print_Hexadecimal](./print_hexadecimal.c)
+	* [Print_Upper_Hex_Chars](./print_hex_upper.c)
 
 * You don’t have to handle the flag characters
 * You don’t have to handle field width
 * You don’t have to handle precision
 * You don’t have to handle the length modifiers
 
-[task4](./printf.c)
+[task4](./_printf.c)
 ```
 Use a local buffer of 1024 chars in order to call write as little as possible.
 ```
-* [buffer](./buffer_const_char.c)
+* [buffer](./print_buffer.c)
 
-[task5](./printf.c)
+[task5](./_printf.c)
 ```
 Handle the following custom conversion specifier:
 ```
-* S : prints the string.
+* S : prints the string. [Print_String](./print_string.c)
 * Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
-	* [print_non-printable_characters](./print_hidden.c)
+	* [Print_Non-Printable_Chars](./print_non_printable.c)
 
 
-[task6](./printf.c)
+[task6](./_printf.c)
 ```
 Handle the following conversion specifier: p.
 ```
@@ -156,95 +140,84 @@ Handle the following conversion specifier: p.
 * You don’t have to handle field width
 * You don’t have to handle precision
 * You don’t have to handle the length modifiers
-	* [pointer_specifier](./get_specifier.c)
+	* [Print_Pointer](./print_pointer.c)
 
-[task7](./printf.c)
+[task7](./_printf.c)
 ```
 Handle the following flag characters for non-custom conversion specifiers:
 ```
-* [+](./get_specifier.c)
-* [space](./get_specifier.c)
-* [#](./get_specifier.c)
+* [+](./get_flags.c)
+* [space](./get_flags.c)
+* [#](./get_flags.c)
 
 
-[task8](./printf.c)
+[task8](./_printf.c)
 ```
 Handle the following length modifiers for non-custom conversion specifiers:
 ```
-* [l](./get_specifier.c)
-	* [ld](./litos.c)
-	* [li](./litos.c)
-	* [lu](./lutos.c)
-	* [lo](./litoo.c)
-	* [lx](.litox.c/)
-	* [lX](./litoX.c)
+* [l](./convert_size_number.c)
 
-* [h](./get_specifier.c)
-	* [hd](./hitos.c)
-	* [hi](./hitos.c)
-	* [hu](./hutos.c)
-	* [ho](./hitoo.c)
-	* [hx](./hitox.c)
-	* [hX](./hitoX.c)
+* [h](./convert_size_unsigned.c)
 
 * Conversion specifiers to handle: d, i, u, o, x, X
 
 
-[task9](./printf.c)
+[task9](./_printf.c)
 ```
 Handle the field width for non-custom conversion specifiers.
 ```
-* [field-width_specifiers](./get_specifier.c)
+* [Handle_Field_Width](./get_width.c)
 
 
-[task10](./printf.c)
+[task10](./_printf.c)
 ```
 Handle the precision for non-custom conversion specifiers.
 ```
-* [precision_specifiers](./get_specifier.c)
+* [Handle_Precision](./get_precision.c)
 
 
-[task11](./printf.c)
+[task11](./_printf.c)
 ```
 Handle the 0 flag character for non-custom conversion specifiers.
 ```
-* [null_flag](./null.c)
+* [Handle_0_Flag](./nprint_int.c)
 
 
-[task12](./printf.c)
+[task12](./_printf.c)
 ```
 Handle the - flag character for non-custom conversion specifiers.
 ```
-* [-flag_specifier](./get_specifier.c)
+* [Handle_-_Flag](./get_flags.c)
 
 
-[task13](./printf.c)
+[task13](./_printf.c)
 ```
 Handle the following custom conversion specifier:
 ```
 * r : prints the reversed string
-	* [reverse_string](./rev_str.c)
+	* [Handle_String_Reverse](./print_reverse.c)
 
 
-[task14](./printf.c)
+[task14](./_printf.c)
 ```
 Handle the following custom conversion specifier:
 ```
 * R: prints the rot13'ed string
-	* [rot13_encryption](./rot13.c)
+	* [Rot13_Encryption](./print_rot13.c)
 
 
-[task15](./printf.c)
+[task15](./_printf.c)
 ```
 All the above options work well together.
 ```
 * [header_file](./main.h)
-* Helper functions:
-	* [specifiers](./get_specifier.c)
-	* [stringize_arguments](./stringize_arg.c)
-	* [check_if_puts](./ifputs.c)
-	* [hancle_empty_chars](./nil.c)
 
-## Collaborators
-* ***Yasmine Ben Ali***
-* ***Samuel Selasi***
+## Pseudocode
+
+## Flow-Chart Diagram
+
+## Implementation
+
+# Collaborators
+* **Yasmine Ben Ali**
+* **Samuel Selasi**
