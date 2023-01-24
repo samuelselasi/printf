@@ -236,7 +236,7 @@ All the above options work well together.
 8. If the current character is "%", it calls the helper functions get_flags, get_width, get_precision, get_size and handle_print to process the formatting
 9. It prints the output to the buffer and increments the printed_chars by the number of characters printed.
 
-10. At the end of the iteration, it calls the print_buffer function to print whatever is left in the buffer.
+10. At the end of the iteration; it calls the print_buffer function to print whatever is left in the buffer.
 
 11. The function ends the variable argument list and returns the total number of characters printed.
 
