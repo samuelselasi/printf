@@ -213,6 +213,7 @@ All the above options work well together.
 * [header_file](./main.h)
 
 ## Pseudocode
+[draw.io](https://drive.google.com/file/d/1PCFpX56mtAerF7RS7wzx9HCEFXc-Drib/view?usp=sharing)
 [Pseudocode_For_Printf](./https://docs.google.com/document/d/1BOKUnRWP_8GRWBPqD_BZW-OB2V7Nh4YgCH765JsM1gg/edit?usp=sharing)
 
 ## Flow-Chart Diagram
