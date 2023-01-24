@@ -215,7 +215,7 @@ All the above options work well together.
 ## Pseudocode
 
 ## Flow-Chart Diagram
-
+![_PRINTF](https://user-images.githubusercontent.com/117751396/214351434-afbca8cb-b6d0-4494-91c8-08236143bcb8.png)
 ## Implementation
 
 # Collaborators
