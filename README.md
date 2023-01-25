@@ -194,7 +194,7 @@ Handle the - flag character for non-custom conversion specifiers.
 ```
 Handle the following custom conversion specifier:
 ```
-* r : prints the reversed string
+* r : prints the reversed string.
 	* [Handle_String_Reverse](./print_reverse.c)
 
 
